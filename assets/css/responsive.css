@@ -1,0 +1,217 @@
+@media only screen and (min-width: 1600px) {
+    .container{
+        max-width: 1700px;
+    }
+}
+
+@media only screen  and (max-width: 1599px) {}
+
+
+/* laptop devices */
+@media only screen  and (max-width: 1399px) {
+    .navbar--logo--searchBox--wrapper {
+    column-gap: 50px;
+}
+.sl-container-details-title h2 {
+    font-size: 38px;
+}
+}
+
+/* large tablet devices */
+@media only screen  and (max-width: 1199px) {
+    .navbar--SearchBox--inputBox {
+    width: 250px;
+}
+.sixteenPixelAshThin {
+    font-size: 15px;
+}
+.filterBtn {
+    padding: 12px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.navbar--profile--image img {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.navbar--profile--image {
+    width: 52px;
+    height: 50px;
+}
+.navbar--logo {
+    width: 90px;
+    height: auto;
+}
+}
+
+
+/* medium tablet devices */
+@media only screen  and (max-width: 991px){
+    .navbar--searchBox--filter--wrapper{
+        position: relative;
+    }
+    .navbar--SearchBox--wrapper{
+        position: absolute;
+        top: 80px;
+    }
+    .mainHeading {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  
+}
+.navbar--SearchBox--wrapper {
+    position: absolute;
+    top: 80px;
+    left: -141px;
+}
+.navbar--SearchBox--inputBox {
+    width: 392px;
+}
+th {
+    padding: 30px 60px;
+}
+th, td {
+    padding: 20px 12px;
+}
+.photo-upload-modal-box {
+    width: 190px;
+    height: 187px;
+}
+.login--wrapper {
+    padding: 40px;
+}
+
+}
+
+
+/* small tablet devices */
+@media only screen  and (max-width: 767px) {
+    .main--header--boxs {
+    align-items: start;
+    gap: 26px;
+    flex-direction: column;
+}
+.navbar--logo--searchBox--wrapper {
+    column-gap: 15px;
+}
+.navbar--SearchBox--wrapper {
+    left: -104px;
+}
+.navbar--SearchBox--inputBox {
+    width: 366px;
+}
+.navbar--logo {
+    width: 70px;
+    height: auto;
+}
+.sixteenPixelAshThin {
+    display: none;
+}
+.dropDown--post {
+    justify-content: end;
+}
+.navbar--SearchBox--wrapper {
+    left: -86px;
+}
+}
+
+
+/* large mobile devices */
+@media only screen  and (max-width: 575px) {
+    .filter-calander-wrap {
+    left: -100px;
+}
+.sl-container-details-title h2 {
+    font-size: 30px;
+}
+}
+
+
+/* mobile devices */
+@media only screen  and (max-width: 479px) {
+.sixteenPixelBlackThin {
+    font-size: 15px;
+}
+.filter-calander-wrap {
+    left: -147px;
+}
+.modal-button button {
+    width: 148px;
+}
+.logout-modal-body {
+    padding: 30px;
+}
+.photo-change-modal {
+    padding: 30px;
+}
+.change-password-modal-body {
+    padding: 30px;
+}
+.add-item-btn-wrap a {
+    padding: 10px 20px;
+}
+.navbar--SearchBox--wrapper {
+    top: 63px;
+}
+.sl-container-details-title h2 {
+    font-size: 24px;
+}
+.sl-container-details-wrapper {
+   padding: 20px;
+}
+.login--wrapper {
+    padding: 20px;
+}
+}
+
+
+
+/* extra small devices */
+@media only screen  and (max-width: 374px){
+    .navbar--SearchBox--inputBox {
+    width: 300px;
+}
+.navbar--logo {
+    width: 65px;
+}
+.filterBtn {
+    padding: 10px 10px;
+}
+.navbar--profile--image {
+    width: 45px;
+    height: 45px;
+}
+.filter-calander-wrap {
+    padding: 5px 2px;
+    left: -142px;
+}
+.modal-button {
+    gap: 10px;
+}
+.modal-button button {
+    width: 130px;
+    font-size: 14px;
+    padding: 10px;
+}
+.logout-modal-body h2 {
+    font-size: 20px;
+}
+.sl-single-input-box-for-image .sl-image-box {
+    padding: 15px;
+    height: 190px;
+}
+.sl-container-details-title h2 {
+    font-size: 20px;
+}
+.login--wrapper {
+    padding: 14px;
+}
+}

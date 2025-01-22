@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arifsey Dov</title>
+    <!-- All Plugins CSS -->
+    <link rel="stylesheet" href="./assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/nice-select.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/flatpickr.min.css">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./assets/css/helper.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- header area starts -->
+    <header class="sticky-top">
+    <div class="container">
+        <nav class="navbar--wrapper">
+        <div class="navbar--main">
+          <div class="navbar--logo--searchBox--wrapper">   
+            <a href="index.html">
+              <div class="navbar--logo">
+                <img src="./assets/images/Logo.png" alt="not found" />
+              </div>
+            </a>
+            <div class="navbar--searchBox--filter--wrapper">
+              <form action="#">
+                <div class="navbar--SearchBox--wrapper">
+                  <div class="navbar--SearchBox--inputBox">
+                    <input placeholder="Search Here" type="search" />
+                    <button class="searchBoxIcon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                          d="M20.9998 21L15.8028 15.803M15.8028 15.803C17.2094 14.3965 17.9996 12.4887 17.9996 10.4995C17.9996 8.51035 17.2094 6.60262 15.8028 5.19605C14.3962 3.78947 12.4885 2.99927 10.4993 2.99927C8.51011 2.99927 6.60238 3.78947 5.19581 5.19605C3.78923 6.60262 2.99902 8.51035 2.99902 10.4995C2.99902 12.4887 3.78923 14.3965 5.19581 15.803C6.60238 17.2096 8.51011 17.9998 10.4993 17.9998C12.4885 17.9998 14.3962 17.2096 15.8028 15.803Z"
+                          stroke="#727272"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="filter--calender--wrapper">
+                  <div class="position-relative day-filter-main-wrapper">
+                    <div class="filterBtn dataFilterWrapper ">
+                      <svg class="dataFilterBtn"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                          d="M12 3C14.755 3 17.455 3.232 20.083 3.678C20.616 3.768 21 4.234 21 4.774V5.818C21 6.11348 20.9418 6.40606 20.8287 6.67904C20.7157 6.95203 20.5499 7.20007 20.341 7.409L14.909 12.841C14.7001 13.0499 14.5343 13.298 14.4213 13.571C14.3082 13.8439 14.25 14.1365 14.25 14.432V17.359C14.2501 17.777 14.1337 18.1867 13.914 18.5423C13.6943 18.8978 13.3799 19.1851 13.006 19.372L9.75 21V14.432C9.75 14.1365 9.69181 13.8439 9.57874 13.571C9.46566 13.298 9.29993 13.0499 9.091 12.841L3.659 7.409C3.45007 7.20007 3.28434 6.95203 3.17126 6.67904C3.05819 6.40606 3 6.11348 3 5.818V4.774C3 4.234 3.384 3.768 3.917 3.678C6.58757 3.22586 9.29143 2.99906 12 3Z"
+                          stroke="#727272"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="filter-items">
+                      <select name class="wide " id="mySelect">
+                        <option value="Today">Today</option>
+                        <option value="Week">Week</option>
+                        <option value="Month">Month</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="position-relative calander-main-wrapper">
+                    <div class="filterBtn date-by-filter">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                          d="M6.75 3V5.25M17.25 3V5.25M3 18.75V7.5C3 6.90326 3.23705 6.33097 3.65901 5.90901C4.08097 5.48705 4.65326 5.25 5.25 5.25H18.75C19.3467 5.25 19.919 5.48705 20.341 5.90901C20.7629 6.33097 21 6.90326 21 7.5V18.75M3 18.75C3 19.3467 3.23705 19.919 3.65901 20.341C4.08097 20.7629 4.65326 21 5.25 21H18.75C19.3467 21 19.919 20.7629 20.341 20.341C20.7629 19.919 21 19.3467 21 18.75M3 18.75V11.25C3 10.6533 3.23705 10.081 3.65901 9.65901C4.08097 9.23705 4.65326 9 5.25 9H18.75C19.3467 9 19.919 9.23705 20.341 9.65901C20.7629 10.081 21 10.6533 21 11.25V18.75M12 12.75H12.008V12.758H12V12.75ZM12 15H12.008V15.008H12V15ZM12 17.25H12.008V17.258H12V17.25ZM9.75 15H9.758V15.008H9.75V15ZM9.75 17.25H9.758V17.258H9.75V17.25ZM7.5 15H7.508V15.008H7.5V15ZM7.5 17.25H7.508V17.258H7.5V17.25ZM14.25 12.75H14.258V12.758H14.25V12.75ZM14.25 15H14.258V15.008H14.25V15ZM14.25 17.25H14.258V17.258H14.25V17.25ZM16.5 12.75H16.508V12.758H16.5V12.75ZM16.5 15H16.508V15.008H16.5V15Z"
+                          stroke="#727272"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+
+                    <div class="filter-calander-wrap position-absolute ">
+                      <div class="date-filter-form">
+                        <form action="">
+                          <!-- <input type="date" class="form-control shadow-none" name="" id=""> -->
+
+                          <input type="text" id="datePicker" class="form-control shadow-none">
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="navbar--profile">
+            <div class="navbar--profile--image">
+              <img src="./assets/images/profileImg.png" alt="not found">
+            </div>
+
+            <div class="navbar--profile--content">
+              <h5 class="sixteenPixelBlackThin">Alex bril</h5>
+              <div class="dropDown--post">
+                <h6 class="sixteenPixelAshThin">General manager</h6>
+
+                <div class="position-relative">
+
+                  <div class="chorvotDown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                      height="10"
+                      viewBox="0 0 16 10" fill="none">
+                      <path d="M1 8.5L8 1.5L15 8.5" stroke="#727272"
+                        stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+
+                  <div class="profile-menu-wrapper">
+                    <ul>
+                      <li><button type="button" class
+                          data-bs-toggle="modal"
+                          data-bs-target="#changePhotodModal">
+                          Change Photo
+                        </button> </li>
+                      <li>Id: 51369130</li>
+                      <li><button type="button" class
+                          data-bs-toggle="modal"
+                          data-bs-target="#changePasswordModal">
+                          Change Password
+                        </button></li>
+                      <li><button type="button" class
+                          data-bs-toggle="modal" data-bs-target="#logoutModal">
+                          Log Out
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <!-- header area starts -->
+
+    <!-- main area starts -->
+    <main>
+      <!-- grid section starts -->
+      <section class="sl-container-details-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-10">
+              <div class="sl-container-details-wrapper">
+                <div class="sl-container-details-title">
+                  <h2>Input Container Details</h2>
+                </div>
+                <form action>
+                  <div class="sl-single-input-box">
+                    <label for>Order Number</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input order number"
+                      required>
+                  </div>
+                  <div class="sl-single-input-box">
+                    <label for>Container Number</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input container number"
+                      required>
+                  </div>
+
+                    <div class="sl-single-input-box-for-image">
+                    <label class="sl-image-box" for="forImage1">
+                      <p class="imagePrompt">Image or File Upload
+                        here...</p>
+                      <img class="fileImage" src alt style="display: none;">
+
+                      <span class="fileStatus"
+                        style="display: none; color: green;">
+                        <i class="check-icon" style="color: green;">&#10003;</i>
+                        file added successfully!
+                      </span>
+
+                      <span class="browseText">Browse File</span>
+
+                    </label>
+                    <input type="file" id="forImage1" class="fileInput d-none">
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Status</label>
+                    <select name class="wide" id>
+                      <option value="Loading">Loading</option>
+                      <option value="Gate in">Gate in</option>
+                      <option value="Loaded">Loaded</option>
+                    </select>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Sea Line</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input sea line link"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Arrival day</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input arrival day"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Status</label>
+                    <select name class="wide" id>
+                      <option value="Loading">Under Reviews</option>
+                      <option value="Gate in">Clearance approved</option>
+                      <option value="Loaded">Duties/Taxes Owed</option>
+                      <option value="Loaded">Customs Hold</option>
+                    </select>
+                  </div>
+
+                  <div class="sl-single-input-box-for-image">
+                    <label class="sl-image-box" for="forImage2">
+                      <p class="imagePrompt">Image or File Upload
+                        here...</p>
+
+                      <img class="fileImage" src alt style="display: none;">
+
+                      <span class="fileStatus"
+                        style="display: none; color: green;">
+                        <i class="check-icon" style="color: green;">&#10003;</i>
+                        file added successfully!
+                      </span>
+                      <span class="browseText">Browse File</span>
+
+                    </label>
+                    <input type="file" id="forImage2" class="fileInput d-none">
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Release day</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input release day"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Trucking Carrier</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input trucking carrier"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Trucking schedule</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input trucking schedule"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Trucking Status</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input trucking status"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Delivery day</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input delivery day"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Container</label>
+                    <input type="text" class="form-control shadow-none"
+                      placeholder="Input container situation"
+                      required>
+                  </div>
+
+                  <div class="sl-single-input-box-for-button">
+                    <input type="reset">
+                    <button type="submit">Submit</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- grid section ends -->
+    </main>
+      <!--Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1"
+      aria-labelledby="logoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body logout-modal-body">
+            <h2>Are you want To Log out to The Dash Board </h2>
+             <form action></form>
+            <div class="modal-button">
+                <button type="button" data-bs-dismiss="modal"
+                  aria-label="Close">No</button>
+                <button type="submit">Yes</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Change password Modal -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1"
+      aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+
+               <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+
+          </div>
+          <div class="modal-body change-password-modal-body">
+            <h2>Change Password</h2>
+            <form action="">
+              <div class="emPloyee--inputBox">
+                <div class="employee--Inp--svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M16.5 10.5V6.75C16.5 5.55653 16.0259 4.41193 15.182 3.56802C14.3381 2.72411 13.1935 2.25 12 2.25C10.8065 2.25 9.66193 2.72411 8.81802 3.56802C7.97411 4.41193 7.5 5.55653 7.5 6.75V10.5M6.75 21.75H17.25C17.8467 21.75 18.419 21.5129 18.841 21.091C19.2629 20.669 19.5 20.0967 19.5 19.5V12.75C19.5 12.1533 19.2629 11.581 18.841 11.159C18.419 10.7371 17.8467 10.5 17.25 10.5H6.75C6.15326 10.5 5.58097 10.7371 5.15901 11.159C4.73705 11.581 4.5 12.1533 4.5 12.75V19.5C4.5 20.0967 4.73705 20.669 5.15901 21.091C5.58097 21.5129 6.15326 21.75 6.75 21.75Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <input class="passWord" placeholder="Old Password" type="password" required="">
+                <div class="employee--Inp--svg forToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.03589 12.322C1.96688 12.1146 1.96688 11.8904 2.03589 11.683C3.42289 7.51 7.35989 4.5 11.9999 4.5C16.6379 4.5 20.5729 7.507 21.9629 11.678C22.0329 11.885 22.0329 12.109 21.9629 12.317C20.5769 16.49 16.6399 19.5 11.9999 19.5C7.36189 19.5 3.42589 16.493 2.03589 12.322Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+              <div class="emPloyee--inputBox">
+                <div class="employee--Inp--svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M16.5 10.5V6.75C16.5 5.55653 16.0259 4.41193 15.182 3.56802C14.3381 2.72411 13.1935 2.25 12 2.25C10.8065 2.25 9.66193 2.72411 8.81802 3.56802C7.97411 4.41193 7.5 5.55653 7.5 6.75V10.5M6.75 21.75H17.25C17.8467 21.75 18.419 21.5129 18.841 21.091C19.2629 20.669 19.5 20.0967 19.5 19.5V12.75C19.5 12.1533 19.2629 11.581 18.841 11.159C18.419 10.7371 17.8467 10.5 17.25 10.5H6.75C6.15326 10.5 5.58097 10.7371 5.15901 11.159C4.73705 11.581 4.5 12.1533 4.5 12.75V19.5C4.5 20.0967 4.73705 20.669 5.15901 21.091C5.58097 21.5129 6.15326 21.75 6.75 21.75Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <input class="passWord" placeholder="New Password" type="password" required="">
+                <div class="employee--Inp--svg forToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.03589 12.322C1.96688 12.1146 1.96688 11.8904 2.03589 11.683C3.42289 7.51 7.35989 4.5 11.9999 4.5C16.6379 4.5 20.5729 7.507 21.9629 11.678C22.0329 11.885 22.0329 12.109 21.9629 12.317C20.5769 16.49 16.6399 19.5 11.9999 19.5C7.36189 19.5 3.42589 16.493 2.03589 12.322Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+              <div class="emPloyee--inputBox">
+                <div class="employee--Inp--svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M16.5 10.5V6.75C16.5 5.55653 16.0259 4.41193 15.182 3.56802C14.3381 2.72411 13.1935 2.25 12 2.25C10.8065 2.25 9.66193 2.72411 8.81802 3.56802C7.97411 4.41193 7.5 5.55653 7.5 6.75V10.5M6.75 21.75H17.25C17.8467 21.75 18.419 21.5129 18.841 21.091C19.2629 20.669 19.5 20.0967 19.5 19.5V12.75C19.5 12.1533 19.2629 11.581 18.841 11.159C18.419 10.7371 17.8467 10.5 17.25 10.5H6.75C6.15326 10.5 5.58097 10.7371 5.15901 11.159C4.73705 11.581 4.5 12.1533 4.5 12.75V19.5C4.5 20.0967 4.73705 20.669 5.15901 21.091C5.58097 21.5129 6.15326 21.75 6.75 21.75Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <input class="passWord" placeholder="Confirm Password" type="password" required="">
+                <div class="employee--Inp--svg forToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.03589 12.322C1.96688 12.1146 1.96688 11.8904 2.03589 11.683C3.42289 7.51 7.35989 4.5 11.9999 4.5C16.6379 4.5 20.5729 7.507 21.9629 11.678C22.0329 11.885 22.0329 12.109 21.9629 12.317C20.5769 16.49 16.6399 19.5 11.9999 19.5C7.36189 19.5 3.42589 16.493 2.03589 12.322Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="modal-button">
+                <button type="button" data-bs-dismiss="modal"
+                  aria-label="Close">Close</button>
+                <button type="submit">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Change Photo Modal -->
+    <div class="modal fade" id="changePhotodModal" tabindex="-1"
+      aria-labelledby="changePhotodModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+
+              <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+
+          </div>
+          <div class="modal-body photo-change-modal">
+            <form action="">
+              <div class="photo-upload-modal-box">
+            
+                <label for="cheangePhotoModal">
+                  <img src="" alt=" add photo" id="changePhotoPreview">
+                </label>
+                  <input type="file" class="d-none" id="cheangePhotoModal" onchange="document.getElementById('changePhotoPreview').src=window.URL.createObjectURL(this.files[0])">
+                
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <div class="modal-button">
+                <button type="button" data-bs-dismiss="modal"
+                  aria-label="Close">Close</button>
+                <button type="submit">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer area starts -->
+    <footer></footer>
+    <!-- footer area ends -->
+
+    <!-- Javascript Links -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/flatpickr.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
