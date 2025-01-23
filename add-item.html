@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arifsey Dov</title>
-    <!-- All Plugins CSS -->
+      <!-- All Plugins CSS -->
     <link rel="stylesheet" href="./assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/plugins/nice-select.min.css" />
     <link rel="stylesheet" href="./assets/css/plugins/owl.carousel.min.css" />
     <link rel="stylesheet" href="./assets/css/plugins/flatpickr.min.css">
+    <link rel="stylesheet" href="./assets/css/plugins/all.min.css">
+
+
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="./assets/css/helper.css" />
@@ -97,7 +100,6 @@
                     <div class="filter-calander-wrap position-absolute ">
                       <div class="date-filter-form">
                         <form action="">
-                          <!-- <input type="date" class="form-control shadow-none" name="" id=""> -->
 
                           <input type="text" id="datePicker" class="form-control shadow-none">
 
@@ -183,11 +185,15 @@
                       placeholder="Input order number"
                       required>
                   </div>
+
                   <div class="sl-single-input-box">
                     <label for>Container Number</label>
                     <input type="text" class="form-control shadow-none"
                       placeholder="Input container number"
                       required>
+                  </div>
+                  <div class="sl-single-input-box">
+                    <label for>Documents</label>
                   </div>
 
                     <div class="sl-single-input-box-for-image">
@@ -226,19 +232,23 @@
 
                   <div class="sl-single-input-box">
                     <label for>Arrival day</label>
-                    <input type="text" class="form-control shadow-none"
+                    <input type="date" id="arivalDay" class="form-control shadow-none"
                       placeholder="Input arrival day"
                       required>
                   </div>
 
                   <div class="sl-single-input-box">
-                    <label for>Status</label>
+                    <label for>Customs status</label>
                     <select name class="wide" id>
                       <option value="Loading">Under Reviews</option>
                       <option value="Gate in">Clearance approved</option>
                       <option value="Loaded">Duties/Taxes Owed</option>
                       <option value="Loaded">Customs Hold</option>
                     </select>
+                  </div>
+
+                  <div class="sl-single-input-box">
+                    <label for>Customs documents</label>
                   </div>
 
                   <div class="sl-single-input-box-for-image">
@@ -261,7 +271,7 @@
 
                   <div class="sl-single-input-box">
                     <label for>Release day</label>
-                    <input type="text" class="form-control shadow-none"
+                    <input type="date" id="releaseDay" class="form-control shadow-none"
                       placeholder="Input release day"
                       required>
                   </div>
@@ -275,7 +285,7 @@
 
                   <div class="sl-single-input-box">
                     <label for>Trucking schedule</label>
-                    <input type="text" class="form-control shadow-none"
+                    <input type="date" id="trakingSedule"class="form-control shadow-none"
                       placeholder="Input trucking schedule"
                       required>
                   </div>
@@ -289,7 +299,7 @@
 
                   <div class="sl-single-input-box">
                     <label for>Delivery day</label>
-                    <input type="text" class="form-control shadow-none"
+                    <input type="date" id="daliveryDate" class="form-control shadow-none"
                       placeholder="Input delivery day"
                       required>
                   </div>
@@ -449,7 +459,6 @@
     <!-- Javascript Links -->
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/flatpickr.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

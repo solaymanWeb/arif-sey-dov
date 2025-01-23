@@ -901,3 +901,36 @@ font-size: 14px;
     width: 170px;
     text-align: center;
 }
+.document-download{
+  background-color: green;
+  color: #FFF;
+  padding: 14px 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.document-download span{
+  padding-left: 5px;
+}
+.sea-link{
+  padding: 14px 30px;
+  color: #FFF;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: green;
+}
+.sea-link span svg{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+.sl-container-details-wrapper .nice-select{
+  font-size: 16px;
+}

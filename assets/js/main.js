@@ -137,11 +137,38 @@ $(document).ready(function () {
 
 
   function flatPickerFunc() {
+
     flatpickr("#datePicker", {
       dateFormat: "d-m-Y",
       inline: true,
       defaultDate: new Date(),
     });
+
+    flatpickr("#arivalDay", {
+      dateFormat: "d-m-Y",
+      inline: false,
+      defaultDate: new Date(),
+    });
+
+    flatpickr("#daliveryDate", {
+      dateFormat: "d-m-Y",
+      inline: false,
+      defaultDate: new Date(),
+    });
+
+    flatpickr("#trakingSedule", {
+      dateFormat: "d-m-Y",
+      inline: false,
+      defaultDate: new Date(),
+    });
+
+    flatpickr("#releaseDay", {
+      dateFormat: "d-m-Y",
+      inline: false,
+      defaultDate: new Date(),
+    });
+
+
   }
 
   flatPickerFunc();
