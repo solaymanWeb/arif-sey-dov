@@ -178,7 +178,7 @@
                 <div class="sl-container-details-title">
                   <h2>Input Container Details</h2>
                 </div>
-                <form action>
+                <form onclick="dd(event)">
                   <div class="sl-single-input-box">
                     <label for>Order Number</label>
                     <input type="text" class="form-control shadow-none"
@@ -195,24 +195,19 @@
                   <div class="sl-single-input-box">
                     <label for>Documents</label>
                   </div>
+                  <!-- ========================= -->
 
-                    <div class="sl-single-input-box-for-image">
-                    <label class="sl-image-box" for="forImage1">
-                      <p class="imagePrompt">Image or File Upload
-                        here...</p>
-                      <img class="fileImage" src alt style="display: none;">
+                <div class="file-upload-container sl-single-input-box-for-image">
+                  <label for="fileInput1" class="file-upload-label sl-image-box">
+                    <p class="">Drag & Drop, or Upload files here...</p>
+                    <span class="browseText">Browse File</span>
+                  </label>
+                  <input type="file"  id="fileInput1" class="file-input d-none"
+                      multiple />
+                  <div class="file-preview-container"></div>
+              </div>
 
-                      <span class="fileStatus"
-                        style="display: none; color: green;">
-                        <i class="check-icon" style="color: green;">&#10003;</i>
-                        file added successfully!
-                      </span>
-
-                      <span class="browseText">Browse File</span>
-
-                    </label>
-                    <input type="file" id="forImage1" class="fileInput d-none">
-                  </div>
+                  <!-- ========================= -->
 
                   <div class="sl-single-input-box">
                     <label for>Status</label>
@@ -251,23 +246,15 @@
                     <label for>Customs documents</label>
                   </div>
 
-                  <div class="sl-single-input-box-for-image">
-                    <label class="sl-image-box" for="forImage2">
-                      <p class="imagePrompt">Image or File Upload
-                        here...</p>
-
-                      <img class="fileImage" src alt style="display: none;">
-
-                      <span class="fileStatus"
-                        style="display: none; color: green;">
-                        <i class="check-icon" style="color: green;">&#10003;</i>
-                        file added successfully!
-                      </span>
-                      <span class="browseText">Browse File</span>
-
-                    </label>
-                    <input type="file" id="forImage2" class="fileInput d-none">
-                  </div>
+                <div class="file-upload-container sl-single-input-box-for-image">
+                  <label for="fileInput2" class="file-upload-label sl-image-box">
+                    <p class="">Drag & Drop, or Upload files here...</p>
+                    <span class="browseText">Browse File</span>
+                  </label>
+                  <input type="file"  id="fileInput2" class="file-input d-none"
+                      multiple />
+                  <div class="file-preview-container"></div>
+              </div>
 
                   <div class="sl-single-input-box">
                     <label for>Release day</label>
@@ -312,7 +299,9 @@
                   </div>
 
                   <div class="sl-single-input-box-for-button">
+
                     <input type="reset">
+
                     <button type="submit">Submit</button>
                   </div>
 
@@ -460,5 +449,6 @@
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/image-upload.js"></script>
   </body>
 </html>

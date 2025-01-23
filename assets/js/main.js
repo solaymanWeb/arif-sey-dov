@@ -18,57 +18,65 @@ $(document).ready(function () {
   // Nice select
   $('select').niceSelect();
 
-  function imageUploadFunc() {
-    document.querySelectorAll(".fileInput").forEach(input => {
-      input.addEventListener("change", function () {
-        const file = input.files[0]; // Get the selected file
-        const parentBox = input.closest(".sl-single-input-box-for-image");
 
-        // Select elements within the same parent box
-        const fileImage = parentBox.querySelector(".fileImage");
-        const imagePrompt = parentBox.querySelector(".imagePrompt");
-        const browseText = parentBox.querySelector(".browseText");
-        const fileStatus = parentBox.querySelector(".fileStatus");
+  function fileUploadFunc() {
+     const fileIcons = {
+                pdf: './assets/images/pdf-logo.png',
+               doc: './assets/images/docs-logo.png',                
+                docx: './assets/images/docs-logo.png',              
+                xls: './assets/images/excel-logo.png',
+                xlsx: './assets/images/excel-logo.png',
+                 default: './assets/images/any-file.png',
+  };
 
-        // Reset visibility of all elements
-        fileImage.style.display = "none";
-        imagePrompt.style.display = "block";
-        browseText.style.display = "block";
-        fileStatus.style.display = "none";
+  // Attach event listener to all `.file-input` elements
+  $('.file-input').on('change', function (e) {
+    const $container = $(this).closest('.file-upload-container'); // Get the specific container
+    const $previewContainer = $container.find('.file-preview-container');
+    $previewContainer.empty(); // Clear previous previews
+    const files = e.target.files;
 
-        if (file) {
-          // Check if the file is an image
-          if (file.type.startsWith("image")) {
-            // Show the image preview
-            fileImage.src = URL.createObjectURL(file);
-            fileImage.style.display = "block";
-            imagePrompt.style.display = "none";
-            browseText.style.display = "none";
-            fileStatus.style.display = "none";
-          } else {
-            // Handle non-image files
-            browseText.textContent = `${file.name} file added successfully!`;
-            browseText.style.color = "green";
+    for (let file of files) {
+      const fileType = file.type.split('/')[1] || file.name.split('.').pop().toLowerCase();
+      const isImage = file.type.startsWith('image/');
+      const previewElement = $('<div class="file-preview"></div>');
+      const deleteIcon = $('<button class="delete-icon">x</button>');
 
-            // Show the upload success message
-            fileStatus.style.display = "block";
-            fileStatus.style.opacity = 0;
-            fileStatus.style.transition = "opacity 0.5s ease-in";
-            setTimeout(() => {
-              fileStatus.style.opacity = 1;
-            }, 50);
+      if (isImage) {
+        const imgPreview = $('<img />');
+        const reader = new FileReader();
+        reader.onload = (e) => imgPreview.attr('src', e.target.result); // Load image preview
+        reader.readAsDataURL(file);
+        previewElement.append(imgPreview);
+      } else {
+        const iconSrc = fileIcons[fileType] || fileIcons.default;
+        const fileIcon = $('<img class="file-icon" />').attr('src', iconSrc);
+        previewElement.append(fileIcon);
+      }
 
-            // Hide irrelevant elements
-            imagePrompt.style.display = "none";
-            fileImage.style.display = "none";
-          }
+      previewElement.append(deleteIcon);
+      $previewContainer.append(previewElement);
+
+      // Remove file on delete icon click
+      deleteIcon.on('click', function () {
+        const index = [...files].indexOf(file);
+        const dt = new DataTransfer();
+        for (let i = 0; i < files.length; i++) {
+          if (i !== index) dt.items.add(files[i]);
         }
+        $(e.target).prop('files', dt.files);
+        previewElement.remove();
       });
-    });
+    }
+  });
   }
 
-  imageUploadFunc();
+  fileUploadFunc()
 
+
+
+
+  
   function profileFunc() {
     const chorvotDown = document.querySelector(".chorvotDown");
     const ProfileMenuWrapper = document.querySelector(".profile-menu-wrapper");
