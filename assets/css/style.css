@@ -610,6 +610,7 @@ tr:nth-child(odd) {
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
+  padding: 0;
 }
 .profile-menu-wrapper ul li:hover button {
   color: #FFF;
@@ -993,6 +994,20 @@ font-size: 14px;
   justify-content: center;
   font-size: 12px;
   cursor: pointer;
+}
+
+.photo-upload-modal-box label img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    display: flex;
+}
+.photo-upload-modal-box {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    cursor: pointer;
 }
 /* Image upload css end
 ==================================== */
