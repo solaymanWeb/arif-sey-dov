@@ -1009,5 +1009,36 @@ font-size: 14px;
     margin: 0 auto;
     cursor: pointer;
 }
+
+
+.arival_calander{
+  border: none;
+  text-align: center;
+  background-color: transparent;
+}
+.arival_calander:focus{
+  background-color: transparent;
+}
+
 /* Image upload css end
 ==================================== */
+
+.document-download {
+    padding: 8px 13px;
+    font-size: 14px;
+}
+.sea-link {
+    padding: 8px 13px;
+}
+.nice-select {
+    padding: 8px 20px;
+}
+.nice-select .list {
+    width: 100%;
+}
+.custom-dropdown {
+    min-width: 180px;
+}
+.table-up-delet-btn button {
+    padding: 8px 15px;
+}
